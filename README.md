@@ -64,3 +64,4 @@ Each predictions CSV contains:
 ## Note
 
 - The script runs three clocks: `Horvath2013`, `AltumAge`, and `ZhangEn`. They proved to be most accurate for bone tissue samples
+- The script can be applied to any BED file but was intially developed for aDNA studies 
