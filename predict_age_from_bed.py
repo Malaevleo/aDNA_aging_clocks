@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 """
-Paper-ready BED to pyaging workflow.
+BED to pyaging workflow.
 
 This script converts one or more BED files with columns `chr`, `pos`, and `beta`
 into Illumina-style CpG tables and predicts biological age with pyaging.
@@ -9,16 +9,16 @@ into Illumina-style CpG tables and predicts biological age with pyaging.
 Examples
 --------
 Single BED file:
-    python predict_age_from_bed.py d:/adna/war3.dammet.bed
+    python predict_age_from_bed.py ./sample.dammet.bed
 
 Multiple BED files with one combined output table:
-    python predict_age_from_bed.py d:/adna/war3.dammet.bed d:/adna/WAR3_converted.meth.bed
+    python predict_age_from_bed.py ./sample.dammet.bed ./sample.roam.bed
 
 Reuse an existing Illumina CSV:
-    python predict_age_from_bed.py d:/adna/war3.dammet.bed --reuse-illumina --illumina-out d:/adna/war3_illumina.csv
+    python predict_age_from_bed.py ./sample.dammet.bed --reuse-illumina --illumina-out ./sample_illumina.csv
 
 EPIC manifest for BED -> Illumina conversion:
-    d:/adna/bone_bench/GSE138307/IDAT/GPL21145_MethylationEPIC_15073387_v-1-0.csv
+    ./GSE138307/IDAT/GPL21145_MethylationEPIC_15073387_v-1-0.csv
 """
 
 import argparse
@@ -33,7 +33,7 @@ import pyaging as pya
 
 
 BASE_DIR = Path("d:/adna")
-EPIC_MANIFEST = BASE_DIR / "bone_bench" / "GSE138307" / "IDAT" / "GPL21145_MethylationEPIC_15073387_v-1-0.csv"
+EPIC_MANIFEST = BASE_DIR / "GSE138307" / "IDAT" / "GPL21145_MethylationEPIC_15073387_v-1-0.csv"
 CHROMS = list(range(1, 23))
 
 
