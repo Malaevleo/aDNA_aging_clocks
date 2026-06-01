@@ -1,4 +1,5 @@
 # Aging Clocks prediction for aDNA BED methylation maps
+<img width="1920" height="1080" alt="gitpic" src="https://github.com/user-attachments/assets/e9ff233f-641c-4d0a-9663-ce2d7973c286" />
 
 This repository contains a standalone script, `predict_age_from_bed.py`, that:
 
