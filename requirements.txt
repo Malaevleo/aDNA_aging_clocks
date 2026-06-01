@@ -1,0 +1,5 @@
+numpy==2.4.4
+pandas==2.3.3
+anndata==0.12.11
+pyaging==0.1.30
+torch==2.11.0
